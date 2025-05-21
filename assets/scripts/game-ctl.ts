@@ -56,7 +56,7 @@ export class game_ctl extends Component {
     onLoad() {
         this.initListener();
         this.result.hideResultNode();
-        this.isOver = false;
+        this.isOver = true;
     }
 
     update() {
@@ -79,8 +79,8 @@ export class game_ctl extends Component {
 
     onGameOver() {
         this.result.showResultNode();
-        this.isOver = true;
         this.birdAudio.onAudioQueue(3);
+        this.isOver = true;
         director.pause();
     }
 
